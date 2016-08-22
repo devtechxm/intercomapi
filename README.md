@@ -30,7 +30,6 @@ require "vendor/autoload.php";
 use Intercom\Api;
 
 $intercom = new Api(appId, apiKey);
-$client = $intercom->client;
 ```
 
 ## Users
@@ -39,7 +38,9 @@ $client = $intercom->client;
 // Get a user	
 	try 
     {
-		$response = $intercom->client->users->getUsers(["email" => "nouser@intercom.io"]);
+    		$client = $intercom->client;
+    		//same as intercom-php sdk
+		$response = $client->users->getUsers(["email" => "nouser@intercom.io"]);
 	}
     catch (Exception $e) 
     {
