@@ -36,9 +36,17 @@ $client = $intercom->client;
 ## Users
 
 ```php
-// Create/update a user
-$client->users->create([
-  "email" => "test@intercom.io"
-]);
+// Get a user	
+	try 
+    {
+		$response = $intercom->client->users->getUsers(["email" => "nouser@intercom.io"]);
+	}
+    catch (Exception $e) 
+    {
+    	$response = $intercom->parseExceptionError($e);
+    }
+    
+    echo '<pre>';
+    print_r($response);
 ```
 For More details visit [intercom reference](https://developers.intercom.io/reference) 
