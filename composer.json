@@ -1,5 +1,5 @@
 {
-    "name": "devtechxm/intercom",
+    "name": "devtechxm/intercomapi",
     "description": "Library for intercom client with error handling",
     "type": "library",
     "require": {
