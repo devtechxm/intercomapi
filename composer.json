@@ -1,0 +1,14 @@
+{
+    "name": "devtechxm/intercom",
+    "description": "Library for intercom client with error handling",
+    "type": "library",
+    "require": {
+        "intercom/intercom-php": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Intercom\\": ["src"]
+        }
+    },
+    "minimum-stability": "dev"
+}
