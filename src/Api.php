@@ -12,17 +12,6 @@ class Api {
 
   function __construct($appId=false,$apiKey=false)
   {
-    if(!$appId)
-      $appId = getenv('INTERCOM_APPID');
-
-    if(!$apiKey)
-      $apiKey = getenv('INTERCOM_APIKEY');
-
-    if(!$appId || !$apiKey)
-    {
-//       throw new Exception("Unable to find appId or apiKey", 1);      
-    }
-
     $this->client = new IntercomClient($appId,$apiKey);
   }
 
