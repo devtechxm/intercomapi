@@ -20,7 +20,7 @@ class Api {
 
     if(!$appId || !$apiKey)
     {
-      throw new Exception("Unable to find appId or apiKey", 1);      
+//       throw new Exception("Unable to find appId or apiKey", 1);      
     }
 
     $this->client = new IntercomClient($appId,$apiKey);
